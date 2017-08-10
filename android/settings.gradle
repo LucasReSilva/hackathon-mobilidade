@@ -1,0 +1,3 @@
+rootProject.name = 'mobilidade'
+
+include ':app'
