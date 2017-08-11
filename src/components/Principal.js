@@ -2,12 +2,12 @@ import { NavigationComponent } from 'react-native-material-bottom-navigation';
 import { TabNavigator } from 'react-navigation';
 
 import MoviesAndTV from './classes/MoviesAndTV';
-import Music from './classes/Music';
+import Maps from './classes/Maps';
 import Books from './classes/Books';
 
 export default TabNavigator({
+	Maps: { screen: Maps },
 	MoviesAndTV: { screen: MoviesAndTV },
-	Music: { screen: Music },
 	Books: { screen: Books }
 }, {
 	tabBarComponent: NavigationComponent,
@@ -17,11 +17,11 @@ export default TabNavigator({
 			labelColor: 'white',
 			rippleColor: 'white',
 			tabs: {
+				Maps: {
+					barBackgroundColor: '#00796B'
+				},
 				MoviesAndTV: {
 					barBackgroundColor: '#37474F'
-				},
-				Music: {
-					barBackgroundColor: '#00796B'
 				},
 				Books: {
 					barBackgroundColor: '#5D4037'
