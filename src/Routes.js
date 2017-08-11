@@ -10,4 +10,3 @@ export default () => (
 		<Scene key='principal' component={Principal} title='Principal' hideNavBar={false} renderBackButton={() => (null)} />
 	</Router>
 );
-
