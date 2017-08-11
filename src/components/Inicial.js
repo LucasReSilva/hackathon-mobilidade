@@ -3,9 +3,11 @@ import {
 	TextInput,
 	View,
 	StyleSheet,
-	Button
+	Button,
+	Text
 } from 'react-native';
 import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
 import { modificaEmailCadastro, modificaSenhaCadastro } from '../actions/CadastroActions';
 
 class Inicial extends Component {
@@ -27,8 +29,11 @@ class Inicial extends Component {
 			<View style={styles.botaoCadastro}>
 				<Button
 					title='Cadastrar'
-					onPress={() => alert('Hi')}
+					onPress={() => Actions.principal()}
 				/>
+			</View>
+			<View style={styles.centerContent}>
+				<Text> Ou entre se já tiver cadastro </Text>
 			</View>
 		</View>
 	);
@@ -49,6 +54,9 @@ const styles = StyleSheet.create({
 		marginTop: 30,
 		marginLeft: 70,
 		marginRight: 70
+	},
+	centerContent: {
+		alignItems: 'center'
 	}
 });
 
